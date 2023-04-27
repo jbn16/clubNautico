@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'clubNautico';
+  titulo = 'CLUB NÁUTICO';
+
+  constructor(private router:Router){}
+
+  Inicio(){
+    this.router.navigate(['v0/api/inicio']);
+  }
+
+  Listar(){
+    this.router.navigate(['v0/api/socios']);
+  }
+
+  Insertar(){
+    this.router.navigate(['v0/api/socios/insertar']);
+  }
+
 }
